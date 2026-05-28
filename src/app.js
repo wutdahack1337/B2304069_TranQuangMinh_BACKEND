@@ -1,6 +1,8 @@
 import express from "express";
 
-import contactsRouter from "./app/routes/contact.route.js"
+import contactsRouter from "./routes/contact.route.js"
+
+import { notFound, errorHandler } from "./middlewares/error.middleware.js";
 
 const app = express();
 app.use(express.json());
@@ -12,5 +14,8 @@ app.get("/", (request, response) => {
 })
 
 app.use("/api/contacts", contactsRouter);
+
+app.use(notFound);
+app.use(errorHandler);
 
 export default app;
