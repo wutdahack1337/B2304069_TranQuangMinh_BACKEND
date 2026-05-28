@@ -1,0 +1,30 @@
+{
+  "name": "contactbook",
+  "version": "1.0.0",
+  "description": "contactbook",
+  "homepage": "https://github.com/wutdahack1337/contactbook#readme",
+  "bugs": {
+    "url": "https://github.com/wutdahack1337/contactbook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wutdahack1337/contactbook.git"
+  },
+  "license": "ISC",
+  "author": "wutdahack1337",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.3"
+  }
+}
