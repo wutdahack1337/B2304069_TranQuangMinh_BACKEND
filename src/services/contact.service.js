@@ -10,6 +10,6 @@ export const findAllFavorite = () => Contact.find({favorite: true});
 
 export const findOne = (id) => Contact.findById(id);
 
-export const update = (id, payload) => Contact.findByIdAndUpdate(id, payload);
+export const update = (id, payload) => Contact.findByIdAndUpdate(id, payload, {new: true, runValidators: true}); // validate new payload and return new document
 
 export const deleteOne = (id) => Contact.findByIdAndDelete(id);
