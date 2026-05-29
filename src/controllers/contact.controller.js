@@ -16,12 +16,13 @@ export const deleteAll = async (request, response) => {
     response.status(204).send();
 }
 
-export const findOne = async (request, response) => {
-    response.status(200).json({message: "findOne handler"});
+export const findAllFavorite = async (request, response) => {
+    const favoriteContacts = await contactService.findAllFavorite();
+    response.status(200).json({data: favoriteContacts});
 }
 
-export const findAllFavorite = async (request, response) => {
-    response.status(200).json({message: "findAllFavorite handler"});
+export const findOne = async (request, response) => {
+    response.status(200).json({message: "findOne handler"});
 }
 
 export const update = async (request, response) => {
