@@ -6,13 +6,18 @@ export const create = async (request, response) => {
     response.status(201).json({data: responseContent});
 }
 
-export const findOne = async (request, response) => {
-    response.status(200).json({message: "findOne handler"});
-}
-
 export const findAll = async (request, response) => {
     const contacts = await contactService.findAll();
     response.status(200).json({data: contacts});
+}
+
+export const deleteAll = async (request, response) => {
+    await contactService.deleteAll();
+    response.status(204).send();
+}
+
+export const findOne = async (request, response) => {
+    response.status(200).json({message: "findOne handler"});
 }
 
 export const findAllFavorite = async (request, response) => {
@@ -27,6 +32,3 @@ export const deleteOne = async (request, response) => {
     response.status(204).send();
 }
 
-export const deleteAll = async (request, response) => {
-    response.status(204).send();
-}
