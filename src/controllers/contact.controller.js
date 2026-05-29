@@ -19,9 +19,9 @@ export const update = async (request, response) => {
 }
 
 export const deleteOne = async (request, response) => {
-    response.status(200).json({message: "deleteOne handler"});
+    response.status(204).send();
 }
 
 export const deleteAll = async (request, response) => {
-    response.status(200).json({message: "deleteAll handler"});
+    response.status(204).send();
 }
