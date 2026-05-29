@@ -1,5 +1,9 @@
+import * as contactService from "../services/contact.service.js"
+
 export const create = async (request, response) => {
-    response.status(201).json({message: "create handler"});
+    const payload = request.body
+    const responseContent = await contactService.create(payload)
+    response.status(201).json({data: responseContent});
 }
 
 export const findOne = async (request, response) => {
@@ -7,7 +11,8 @@ export const findOne = async (request, response) => {
 }
 
 export const findAll = async (request, response) => {
-    response.status(200).json({message: "findAll handler"});
+    const contacts = await contactService.findAll();
+    response.status(200).json({data: contacts});
 }
 
 export const findAllFavorite = async (request, response) => {
