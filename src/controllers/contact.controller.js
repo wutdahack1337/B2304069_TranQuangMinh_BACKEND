@@ -35,6 +35,8 @@ export const update = async (request, response) => {
 }
 
 export const deleteOne = async (request, response) => {
+    const id = request.params.id;
+    await contactService.deleteOne(id);
     response.status(204).send();
 }
 
