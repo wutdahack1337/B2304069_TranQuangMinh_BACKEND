@@ -22,7 +22,9 @@ export const findAllFavorite = async (request, response) => {
 }
 
 export const findOne = async (request, response) => {
-    response.status(200).json({message: "findOne handler"});
+    const id = request.params.id;
+    const contact = await contactService.findOne(id)
+    response.status(200).json({data: contact});
 }
 
 export const update = async (request, response) => {
