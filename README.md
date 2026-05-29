@@ -26,6 +26,8 @@ curl -X POST http://localhost:3000/api/contacts -H "Content-Type: application/js
 
 curl -X POST http://localhost:3000/api/contacts -H "Content-Type: application/json" -d '{"name":"Quang Minh","email":"quangminh@example.com","phone":"0949447156","address":"Can Tho","favorite":true}'
 
+curl -X PUT http://localhost:3000/api/contacts/6a19663d5b1c5cdf21ddc1ff -H "Content-Type: application/json" -d '{"name":"Quang Minh","email":"wutdahack@example.com","phone":"0949447156","address":"Can Tho","favorite":true}'
+
 curl -X DELETE http://localhost:3000/api/contacts
 ```
 

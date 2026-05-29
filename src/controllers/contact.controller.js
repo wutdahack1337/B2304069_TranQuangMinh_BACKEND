@@ -28,7 +28,10 @@ export const findOne = async (request, response) => {
 }
 
 export const update = async (request, response) => {
-    response.status(200).json({message: "update handler"}); 
+    const id = request.params.id;
+    const payload = request.body;
+    const contact = await contactService.update(id, payload);
+    response.status(200).json({data: contact}); 
 }
 
 export const deleteOne = async (request, response) => {

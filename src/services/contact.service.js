@@ -9,3 +9,5 @@ export const deleteAll = () => Contact.deleteMany();
 export const findAllFavorite = () => Contact.find({favorite: true});
 
 export const findOne = (id) => Contact.findById(id);
+
+export const update = (id, payload) => Contact.findByIdAndUpdate(id, payload);
